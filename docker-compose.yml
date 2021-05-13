@@ -19,7 +19,7 @@ services:
     #コンテナの名前"wordpress"
     volumes:
       - ./wordpress:/var/www/html
-      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini
     restart: always
     depends_on:
       - db
