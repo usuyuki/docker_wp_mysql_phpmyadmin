@@ -14,19 +14,13 @@ http://localhost:1111
 
 ## コマンド
 
-このディレクトリで
-
-```
-docker-compose up -d
-```
-
-するだけで、WordPress 環境が完成します。
-
 コンテナ作成&起動
 
 ```
 docker-compose up -d
 ```
+
+(起動から wordpress の作成まで少々時間かかります。)
 
 コンテナの中に入る
 
