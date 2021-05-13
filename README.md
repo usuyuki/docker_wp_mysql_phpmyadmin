@@ -9,6 +9,8 @@ Wordpress と PHPMyAdmin が動く docker 雛形です。
 ローカルホスト WordPress
 http://localhost:1010
 
+※初回は「このページは動作していません」が出るので、ファイルの生成が終わる 2 分程度待つ。
+
 ローカルホスト PHPMyAdmin
 http://localhost:1111
 
