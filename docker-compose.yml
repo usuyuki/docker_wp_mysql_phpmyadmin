@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: root_pass_fB3uWvTS
       MYSQL_DATABASE: wordpress_db
       MYSQL_USER: user
-      MYSQL_PASSWORD: user_pass_Ck6uTvrQ
+      MYSQL_PASSWORD: user_pass_tekitou
 
   wordpress:
     image: wordpress:latest
@@ -29,7 +29,7 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: wordpress_db
       WORDPRESS_DB_USER: user
-      WORDPRESS_DB_PASSWORD: user_pass_Ck6uTvrQ
+      WORDPRESS_DB_PASSWORD: user_pass_tekitou
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
