@@ -1,0 +1,41 @@
+# @format
+
+version: "3"
+services:
+  db:
+    image: mysql:5.7
+    #コンテナの名前"mysql57"
+    volumes:
+      - ./db/mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass_fB3uWvTS
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user_pass_Ck6uTvrQ
+
+  wordpress:
+    image: wordpress:latest
+    #コンテナの名前"wordpress"
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 1010:80
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress_db
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: user_pass_Ck6uTvrQ
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    #コンテナの名前"phpmyadmin"
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 1111:80
