@@ -1,0 +1,2 @@
+# docker_wp_mysql_phpmyadmin
+ WordpressとPHPMyAdminが動くdocker雛形です。
